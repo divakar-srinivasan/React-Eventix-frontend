@@ -16,7 +16,7 @@ const Signin = () => {
             <h1 className='text-white cursor-pointer hover:text-sky-500'>Forget password?</h1>
             <h1 className='text-center text-gray-400 text-xl'>OR</h1>
             <h1 className='text-gray-400'>New to Eventix? <span className='text-white cursor-pointer hover:underline' onClick={()=>navigate('/signup')}> Sign up now</span></h1>
-            <p className='text-sm text-gray-400 mt-4'>This page is protected by Google reCAPTCHA to ensure you're not a bot. <span className='text-sky-500 cursor-pointer'> Learn more.</span></p>
+            <p className='text-sm text-gray-400 mt-4 mb-5'>This page is protected by Google reCAPTCHA to ensure you're not a bot. <span className='text-sky-500 cursor-pointer'> Learn more.</span></p>
           </div>
       </div>
     </div>

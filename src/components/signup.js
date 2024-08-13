@@ -31,17 +31,17 @@ const Signup = () => {
     <div className='flex items-center justify-center min-h-screen'>
       {step === 'email' && (
         <div className='flex-col space-y-10'>
-          <div className='flex justify-center '>
+          <div className='flex justify-center px-7'>
             <div className='flex flex-col items-center justify-center text-center space-y-4'>
             <h1 className='text-4xl text-white font-bold'>Unlock Exclusive Access to College Events! Sign Up Today!</h1>
             <h1 className='text-white text-xl font-semibold'>Book anywhere. Cancel anytime.</h1>
             <h1 className='text-white text-xl '>Ready to Register? Book your Tickets, Enjoy the Events with your Friends</h1>
             </div>
           </div>
-          <div className='flex space-x-5 items-center justify-center'>
+          <div className='flex flex-col space-y-4 md:flex-row md:space-x-5 items-center justify-center'>
           
           <input
-            className='input'
+            className='input md:mt-5'
             type="email"
             placeholder="Enter Email"
             value={email}
@@ -63,8 +63,8 @@ const Signup = () => {
             <h1 className='text-white text-xl '>Ready for Events? Confirm your Slots</h1>
             </div>
           </div>
-          <div className='flex items-center justify-center mt-9 space-x-5'>
-          <button className='btn' onClick={handleBack}>Back</button>
+          <div className='flex flex-col md:flex-row items-center justify-center mt-9 md:space-x-5 space-y-5'>
+          <button className='btn md:mt-4' onClick={handleBack}>Back</button>
           <input
           className='input'
             type="password"

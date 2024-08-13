@@ -8,6 +8,7 @@ theme: {
     extend: {
       colors: {
         'custom-black': 'rgba(0, 0, 0, 0.5)',
+        'custom-red':'#E50914',
       },
     },
   },
