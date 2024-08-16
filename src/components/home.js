@@ -22,7 +22,7 @@ const Home = () => {
     t1.from(listRef2.current,{x:-500,opacity: 0,duration: 0.5,ease: 'power2.out'});
     t1.from(listRef3.current,{x:-500,opacity: 0,duration: 0.5,ease: 'power2.out'});
     t1.from(listRef4.current,{x:-500,opacity: 0,duration: 0.5,ease: 'power2.out'});
-    t1.from(inputRef.current,{x:500,opacity: 0,scale:0.5,duration: 0.5,ease: 'power2.in'});
+    t1.from(inputRef.current,{y:-100,opacity: 0,scale:0.5,duration: 1,ease: 'power2.in'});
   },[])
   return (
     <>

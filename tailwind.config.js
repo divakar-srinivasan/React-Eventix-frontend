@@ -2,16 +2,17 @@
 module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    
   ],
-theme: {
+  theme: {
     extend: {
       colors: {
         'custom-black': 'rgba(0, 0, 0, 0.5)',
-        'custom-red':'#E50914',
+        'custom-red': '#E50914',
+      },
+      fontFamily: {
+        'bebas': ['Bebas Neue', 'sans-serif'],
       },
     },
   },
   plugins: [],
 }
-

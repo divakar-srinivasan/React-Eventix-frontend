@@ -103,7 +103,7 @@ const Signup = () => {
       scale: 0.5,
       xPercent:100,
       opacity:0,
-      duration:2,
+      duration:0.5,
       ease: 'power2.out',
     })
     t1.to(bg.current,{
@@ -128,12 +128,12 @@ const Signup = () => {
 
   return (
     <div className='flex relative h-screen w-full'>
-      <div ref={bg} className="absolute z-10 h-full w-full bg-black flex flex-col  items-center">
-      <img ref={logoTransition} src={logo} alt='loading' className='h-48 w-72' />
-      <div className='flex flex-col items-center gap-5'>
-        <h1 ref={welcome} className='font-bold text-custom-red text-5xl'>WELCOME</h1>
-        <h1 ref={textRef} className='text-white font-bold text-5xl text-center'>.</h1>
-        <h1 ref={pRef} className=' p-4 text-gray-400 font-semibold text-center'>Your Gateway to Unforgettable Events – Book with Ease, Enjoy with Joy!</h1>
+      <div ref={bg} className="absolute z-10 h-full w-full bg-intro flex flex-col items-center">
+      <img ref={logoTransition} src={logo} alt='loading' className='w-72 h-36' />
+      <div className='p-10 mt-20 flex flex-col items-center gap-5'>
+        <h1 ref={welcome} className='font-bold text-custom-red text-5xl font-serif'>WELCOME</h1>
+        <h1 ref={textRef} className='text-white font-bebas text-5xl text-center'>.</h1>
+        <h1 ref={pRef} className='mt-32 p-4 text-gray-200 font-semibold text-center'>Your Gateway to Unforgettable Events – Book with Ease, Enjoy with Joy!</h1>
 
       </div>
       </div>
