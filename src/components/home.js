@@ -26,12 +26,12 @@ const Home = () => {
   },[])
   return (
     <>
-      <div className="flex sticky top-0 items-center justify-between md:px-16 md:py-5 px-2 py-3 w-full bg-black">
+      <div className="flex sticky top-0 items-center justify-between md:px-16 md:py-5 px-2 py-3 w-full bg-black z-10 border-b">
         <img className="md:h-16 md:w-32 h-16 w-28" src={logo} alt="loading" />
         <nav className="hidden md:block">
           <ul className="flex gap-6">
             <li ref={listRef1}  className="nav-link">
-              <Link to="/home">Events</Link>
+              <Link to="/events">Events</Link>
             </li>
             <li ref={listRef2} className="nav-link">
               <Link to="workshops">Workshops</Link>

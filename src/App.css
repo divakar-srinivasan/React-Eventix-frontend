@@ -33,11 +33,39 @@
     @apply bg-color text-white h-10 w-72 rounded-md font-bold hover:bg-red-700 hover:scale-105 transition-transform transition-colors
 }
 .input{
-    @apply p-4 border-2 border-solid border-gray-600 bg-custom-black text-white placeholder-slate-300 rounded-md h-14 w-72 hover:scale-105
+    @apply p-4 border-2 border-solid border-gray-600 bg-custom-black text-white placeholder-slate-300 rounded-md h-14 w-72 hover:scale-105 focus:ring-custom-red focus:border-custom-red outline-none
+}
+.input-select{
+    @apply block text-white p-2.5 bg-custom-black border border-gray-500 rounded-md  shadow-sm focus:outline-none focus:ring-2 hover:scale-105 h-14 w-72 focus:ring-custom-red focus:border-custom-red
 }
 .nav-link{
-    @apply text-white py-2 px-3 cursor-pointer hover:text-custom-red font-bold
+    @apply text-white py-2 px-3 cursor-pointer hover:text-custom-red font-semibold
 }
+.card{
+    @apply w-96 h-96 bg-slate-950 rounded-3xl flex flex-col flex-shrink-0 m-2 hover:scale-105
+}
+.card-content{
+    @apply flex flex-col items-center overflow-y-auto p-2
+}
+
+@media (max-width: 480px) {
+    .card {
+        @apply w-60 h-96;
+    }
+}
+.grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .grid {grid-template-columns: repeat(2, 1fr);}
+  }
+  
+  @media (min-width: 1024px) {
+    .grid {grid-template-columns: repeat(3, 1fr);}
+  }
+  
 
 
 .bg-color {background-color:#E50914;}
@@ -49,47 +77,41 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
-    overflow: hidden; /* Ensure pseudo-element does not overflow */
+    overflow: hidden; 
   }
   
   .bg-img::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
     background: radial-gradient(circle, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
-    pointer-events: none; /* Ensure the pseudo-element doesn't interfere with interactions */
-    mix-blend-mode: multiply; /* Blend the vignette with the background */
-    z-index: 1; /* Ensure it's above the background but below content */
+    pointer-events: none; 
+    mix-blend-mode: multiply; 
+    z-index: 1; 
   }
   
-  .bg-img > * {
-    position: relative; /* Ensure child elements are above the vignette */
-    z-index: 2; /* Make sure content appears above the vignette */
-  }
+  .bg-img > * {position: relative;z-index: 2;}
   
 .signin-container{
     background-color: rgba(0,0,0,0.7);
-    height:auto;width: 450px;border-radius: 6px;
+    height:auto;width: 450px;border-radius: 6px;margin-bottom: 10%;
     padding:48px 68px;display: flex;flex-direction: column;gap: 16px;
-}
-.bg-intro-mobile {
-    background-image: url('./images/bg-intro-mobile.jpg');
-    background-size: cover;
-    background-position: center; 
-    background-repeat: no-repeat;
-    height:100%;
-    width: 100vw; 
 }
 .bg-intro {
     background-image: url('./images/bg-intro.jpeg');
     background-size: cover;
     background-position: center; 
     background-repeat: no-repeat;
-    height:100%;
-    width: 100vw; 
+
 }
+.bg-mobile {
+    background-image: url('./images/bg-intro-mobile.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height:100%;width: 100%; 
+}
+

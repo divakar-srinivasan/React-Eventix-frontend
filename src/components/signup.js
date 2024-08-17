@@ -20,7 +20,7 @@ const Signup = () => {
   };
   const handleBack = () => setStep('email'); 
   const handleSubmit = () => {
-    navigate('/home')
+    navigate('/events')
   };
 
   const logoTransition = useRef(null);
@@ -107,7 +107,7 @@ const Signup = () => {
       ease: 'power2.out',
     })
     t1.to(bg.current,{
-      y:'-100%',
+      x:'-100%',
       duration:2,
       ease: 'power2.out',
     })
