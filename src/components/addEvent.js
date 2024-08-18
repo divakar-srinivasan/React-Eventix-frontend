@@ -44,10 +44,12 @@ const AddEvent = () => {
 
   useEffect(() => {
     if (formData.image) {
-      setImagePreview(URL.createObjectURL(formData.image));
-      return () => URL.revokeObjectURL(imagePreview); 
+      const newImagePreview = URL.createObjectURL(formData.image);
+      setImagePreview(newImagePreview);
+      return () => URL.revokeObjectURL(newImagePreview);
     }
   }, [formData.image]);
+  
 
   useEffect(() => {
     gsap.from(inputRefs.current, {
