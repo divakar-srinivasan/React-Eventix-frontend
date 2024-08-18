@@ -11,6 +11,8 @@ module.exports = {
       },
       fontFamily: {
         'bebas': ['Bebas Neue', 'sans-serif'],
+        'libre': ['Libre Baskerville', 'serif'],
+        'flower':['Indie Flower', 'cursive']
       },
     },
   },
