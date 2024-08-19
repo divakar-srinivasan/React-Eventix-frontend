@@ -2,6 +2,7 @@ import React, { useState ,useEffect ,useRef } from 'react';
 import logo from '../images/EVENTIX.png';
 import { useNavigate } from 'react-router-dom';
 import gsap from "gsap"
+import IntroFooter from './intro_footer';
 
 const Signup = () => {
   const [step, setStep] = useState('email'); 
@@ -127,6 +128,7 @@ const Signup = () => {
   },[])
 
   return (
+    <>
     <div className='flex relative h-screen w-full'>
       <div ref={bg} className="absolute z-10 h-full w-full bg-intro flex flex-col items-center">
       <img ref={logoTransition} src={logo} alt='loading' className='w-72 h-36' />
@@ -194,6 +196,8 @@ const Signup = () => {
       </div>
     </div>
   </div>
+  <IntroFooter />
+  </>
   );
 }
 

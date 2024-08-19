@@ -93,11 +93,15 @@ const AddEvent = () => {
 
   const departments = [
     "Computer Engineering",
-    "Electrical Engineering",
+    "Information Technology",
+    "Electrical and Communication Engineering",
+    "Electrical and Electronics Engineering",
     "Mechanical Engineering",
     "Civil Engineering",
     "Chemical Engineering",
-    "Aerospace Engineering",
+    "Food Technology",
+    "Artificial Intelligence and Data Science",
+    "Artificial Intelligence and Machine Learning",
   ];
 
   return (

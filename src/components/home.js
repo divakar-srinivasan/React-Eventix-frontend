@@ -48,7 +48,7 @@ const Home = () => {
           <nav className="md:hidden block">
             <ul className="flex flex-col fixed h-52 overflow-auto w-full bg-black top-20 left-0 p-5 justify-between ">
               <li className="nav-link">
-                <Link to="/home" className="flex items-center space-x-10">
+                <Link to="/events" className="flex items-center space-x-10">
                   <MdEmojiEvents className="text-white" />
                   <span>Events</span>
                 </Link>
