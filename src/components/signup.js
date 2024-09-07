@@ -3,6 +3,7 @@ import logo from '../images/EVENTIX.png';
 import { useNavigate } from 'react-router-dom';
 import gsap from "gsap"
 import IntroFooter from './intro_footer';
+import axios from 'axios'
 
 const Signup = () => {
   const [step, setStep] = useState('email'); 
@@ -20,7 +21,21 @@ const Signup = () => {
     }
   };
   const handleBack = () => setStep('email'); 
-  const handleSubmit = () => {
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const formData = {
+      email:email,
+      password:password
+    }
+
+    try{
+      const res = await axios.post('http://localhost:5000/api/users/login', formData)
+      console.log(res);
+      console.log('inseted Succesfully')
+    } catch(err){
+      console.log('Error in inserting', err); 
+    }
+
     navigate('/events')
   };
 
@@ -159,7 +174,7 @@ const Signup = () => {
           <input
           ref={input}
             className='input md:mt-5'
-            type="email"
+            type="email" name='email'
             placeholder="Enter Email"
             value={email}
             onChange={handleEmailChange}
@@ -184,7 +199,7 @@ const Signup = () => {
           <button className='btn md:mt-4' onClick={handleBack}>Back</button>
           <input
           className='input'
-            type="password"
+            type="password" name='password'
             placeholder="Enter your password"
             value={password}
             onChange={handlePasswordChange}

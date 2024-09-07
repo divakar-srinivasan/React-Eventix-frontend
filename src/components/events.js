@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import banner from "../images/banner.jpeg";
-import img from "../images/mini.png";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import useSound from 'use-sound';
 import boop from '../sounds/sword.mp3';
+import EventDisplay from "./eventDisplay";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -15,6 +15,8 @@ const Events = () => {
   const input3Ref = useRef(null);
   const [Sound] = useSound(boop);
   const sword_sound = useRef(null);
+
+
 
   useEffect(() => {
     const t2 = gsap.timeline();
@@ -93,58 +95,7 @@ const Events = () => {
         </button>
       </div>
 
-      <div className="flex flex-col ps-20 my-5">
-        <h1 className="text-white text-3xl font-mono p-5">New</h1>
-        <div data-aos="zoom-in-up" className="w-full h-auto flex overflow-x-auto space-x-20">
-          <div className="card">
-            <img src={img} alt="loading" className="w-full h-48" />
-            <div className="card-content">
-              <h1 className="text-white text-3xl">event 1</h1>
-              <h1 className="text-white text-3xl">event 1</h1>
-              <h1 className="text-white text-3xl">event 1</h1>
-              <h1 className="text-white text-3xl">event 1</h1>
-              <h1 className="text-white text-3xl">event 1</h1>
-              <h1 className="text-white text-3xl">event 1</h1>
-            </div>
-            <div className="flex justify-around mb-3">
-              <button className="btn">Register</button>
-              <button className="btn">Explore</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col ps-20 my-5">
-        <h1 className="text-white text-3xl font-mono p-5">Trending</h1>
-        <div data-aos="zoom-in-up" className="w-full h-auto flex overflow-x-auto space-x-20">
-          <div className="card">
-            <img src={img} alt="loading" className="w-full h-48" />
-            <div className="card-content">
-              <h1 className="text-white text-3xl">event 1</h1>
-            </div>
-            <div className="flex justify-around mb-3">
-              <button className="btn">Register</button>
-              <button className="btn">Explore</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col ps-20 my-5">
-        <h1 className="text-white text-3xl font-mono p-5">All</h1>
-        <div data-aos="zoom-in-up" className="w-full h-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="card">
-            <img src={img} alt="loading" className="w-full h-48" />
-            <div className="card-content">
-              <h1 className="text-white text-3xl">event 1</h1>
-            </div>
-            <div className="flex justify-around mb-3">
-              <button className="btn">Register</button>
-              <button className="btn">Explore</button>
-            </div>
-          </div>
-        </div>
-      </div>
+      <EventDisplay/>
     </div>
   );
 };
